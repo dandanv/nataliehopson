@@ -1,0 +1,10 @@
+// Grid system
+.row {
+	@include breakpoints(mobileonly){
+		flex-wrap: wrap;
+
+		.col {
+			width: 100%;
+		}
+	}
+}

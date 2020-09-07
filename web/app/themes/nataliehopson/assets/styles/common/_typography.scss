@@ -1,0 +1,55 @@
+blockquote, 
+blockquote p,
+a.say--hello {
+	@include remy(40);
+	letter-spacing: -0.714px;
+	line-height: 1.25;
+	max-width: 610px;
+	margin: 0 0 115px;
+}
+
+a.say--hello {
+	display: inline-block;
+	margin-bottom: 0;
+	@include breakpoints(tablet){
+		@include remy(14);
+	}
+}
+
+
+a {
+	color: $black;
+	text-decoration: none;
+	&:hover {
+		color: $purple;
+
+		&::after {
+			opacity: 0;
+		}
+	}
+}
+
+.content a {
+	display: inline-block;
+	position: relative;
+	margin-bottom: 2px;
+
+	&:hover {
+		color: $purple;
+
+		&::after {
+			opacity: 0;
+		}
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		height: 1px;
+		background: $black;
+		width: 100%;
+		opacity: 1;
+	}
+}

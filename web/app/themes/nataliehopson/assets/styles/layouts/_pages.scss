@@ -1,0 +1,27 @@
+.content--with_sidebar {
+	.row {
+		display: flex;
+		justify-content: space-between;
+
+		.col {
+			width: calc(100%-284px);
+		}
+		.col:last-child {
+			width: 284px;
+		}
+	}
+
+	h3 {
+		margin-bottom: 6px;
+		@include remy(14);
+		line-height: 1.28;
+		text-transform: uppercase;
+	}
+
+	ul {
+		@include remy(14);
+		line-height: 1.28;
+		margin-bottom: 50px;
+	}
+
+}

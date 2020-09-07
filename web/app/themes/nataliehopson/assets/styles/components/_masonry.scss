@@ -1,0 +1,38 @@
+/* fluid 5 columns */
+.grid-sizer,
+.grid-item { 
+	width: 40%;
+	margin-bottom: 150px;
+	background: $black;
+
+
+	&.is--loaded {
+		.grid--image { background: $purple; }
+	}
+
+	.grid--image {
+		transition: background 1s;
+		width: 100%;
+		padding-bottom: 67%;
+		background: $black;
+	}
+
+	@include breakpoints(mobileonly){
+		width: 100%;
+	}
+ }
+/* 2 columns wide */
+.grid-item--width2 { 
+	width: 20%;
+	.grid--image {
+		width: 100%;
+		padding-bottom: 149%;
+		background: $black;
+	}
+
+	@include breakpoints(mobileonly){
+		width: 100%;
+	}
+}
+
+
