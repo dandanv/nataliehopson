@@ -40,6 +40,29 @@ footer {
 	.js--back_top {
 		display: inline-block;
 		margin-bottom: 20px;
+		border: 0;
+		background: none;
+		appearance: none;
+		@include remy(12);
+		text-transform: uppercase;
+		outline: none;
+
+		&:hover::after {
+			top: -10px;
+		}
+
+		&::after {
+			content: '';
+			width: 10px;
+			height: 4px;
+			display: inline-block;
+			background: url(../images/chevron--up.svg) center center no-repeat;
+			background-size: contain;
+			margin-left: 5px;
+			position: relative;
+			top: -6px;
+			transition: all 0.3s cubic-bezier(0.83, 0, 0.17, 1);
+		}
 
 		@include breakpoints(mobileonly){
 			display: none;

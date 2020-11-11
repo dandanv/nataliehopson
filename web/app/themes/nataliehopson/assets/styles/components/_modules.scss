@@ -8,7 +8,7 @@
   transform-origin: center center;
   width: 10px;
   height: 10px;
-  border-radius: 360px;
+  border-radius: 100%;
   z-index: 9999999;
   background: $black;
   transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
@@ -18,11 +18,19 @@
   }
 
   .is--hover__next & {
-  	background: #ff00ff;
+  	background: url(../images/icon--right.svg) center center no-repeat;
+    background-size: contain;
+    border-radius: 0;
+    width: 31px;
+    height: 20px;
   }
 
   .is--hover__prev & {
-  	background: #ff0000;
+    background: url(../images/icon--left.svg) center center no-repeat;
+    background-size: contain;
+    border-radius: 0;
+    width: 31px;
+    height: 20px;
   }
 
   @include breakpoints(tablet){

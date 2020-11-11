@@ -139,11 +139,13 @@ https://flickity.metafizzy.co
 		@include remy(14);
 		letter-spacing: 0.5px;
 		text-transform: uppercase;
+		font-weight: 400;
 	}
 
 	span {
 		@include remy(14);
 		line-height: 1;
+		font-weight: 300;
 	}
 
 	button {
@@ -160,6 +162,8 @@ https://flickity.metafizzy.co
 		border: 0;
 		appearance: none;
 		outline: none;
+		font-weight: 300;
+
 		&::after {
 			display: none;
 		}
@@ -202,6 +206,7 @@ https://flickity.metafizzy.co
 	background: none;
 	&:hover {
 		background: none;
+		cursor: none;
 	}
 	svg {
 		visibility: hidden;
