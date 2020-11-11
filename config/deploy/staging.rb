@@ -1,5 +1,5 @@
 set :stage, :development
-set :deploy_to, -> { "/home/eao6ba2vfn0b" }
+set :deploy_to, -> { "/home/eao6ba2vfn0b/public_html/nataliehopson" }
 set :tmp_dir, "/home/eao6ba2vfn0b/tmp"
 
 #deploy certain branch: cap staging deploy BRANCH=branch_name
