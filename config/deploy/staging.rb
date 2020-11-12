@@ -1,5 +1,5 @@
 set :stage, :development
-set :deploy_to, -> { "/home/eao6ba2vfn0b/public_html" }
+set :deploy_to, -> { "/home/eao6ba2vfn0b" }
 set :tmp_dir, "/home/eao6ba2vfn0b/tmp"
 
 #deploy certain branch: cap staging deploy BRANCH=branch_name
@@ -29,5 +29,5 @@ server '107.180.4.64', user: 'eao6ba2vfn0b', port: 22, password: 'H@wks36dan', r
 fetch(:default_env).merge!(wp_env: :development)
 
 SSHKit.config.command_map[:bash] = "/usr/bin"
-SSHKit.config.command_map[:composer] = "/usr/local/bin/php /home/eao6ba2vfn0b/composer.phar"
+SSHKit.config.command_map[:composer] = "php -d allow_url_fopen=on /home/eao6ba2vfn0b/composer.phar install"
 
