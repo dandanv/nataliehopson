@@ -29,5 +29,5 @@ server '107.180.4.64', user: 'eao6ba2vfn0b', port: 22, password: 'H@wks36dan', r
 fetch(:default_env).merge!(wp_env: :development)
 
 SSHKit.config.command_map[:bash] = "/usr/bin"
-SSHKit.config.command_map[:composer] = "/usr/bin/php -d allow_url_fopen=on /opt/cpanel/composer/bin/composer"
+SSHKit.config.command_map[:composer] = "/usr/local/bin/php -d allow_url_fopen=on /opt/cpanel/composer/bin/composer"
 
